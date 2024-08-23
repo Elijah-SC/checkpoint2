@@ -1,0 +1,55 @@
+.bg-img {
+  background-image: url(https://th.bing.com/th/id/R.65ad6cf59c1045f9130e397dee89fb84?rik=%2brmm5JiPucXiPA&pid=ImgRaw&r=0);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+
+}
+
+.moon-miner {
+  font-size: 80px;
+  text-shadow: 0px 2px 5px blue;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-bottom: unset;
+}
+
+.bg-warning {
+  background-color: #FCB707;
+}
+
+.bg-warning-darker {
+  background-color: #FFCC4A;
+
+
+}
+
+
+.stats-width {
+  min-width: 6em;
+  display: inline-block;
+}
+
+.stats-icons {
+  font-size: 20px;
+}
+
+.up-btn {
+  min-width: 10em;
+  display: inline-block;
+}
+
+/* .icons {
+  min-width: 10em;
+  display: inline-block;
+
+} */
+
+.img-moon {
+  cursor: pointer;
+}
