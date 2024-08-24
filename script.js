@@ -1,40 +1,10 @@
 console.log(`Get ready to eat some CHEESE`)
 
-let totalCheese = 10000
+let totalCheese = 100000
 let clickPower = 1
 let automaticPower = 0
 let bonus = 0
 
-// const pickaxe = {
-
-//   price: 50,
-//   qty: 0,
-//   bonus: 1,
-
-// }
-// const drill = {
-
-//   price: 300,
-//   qty: 0,
-//   bonus: 20,
-
-// }
-
-// const rover = {
-
-//   price: 1000,
-//   qty: 0,
-//   bonus: 5,
-
-// }
-
-// const spaceStation = {
-
-//   price: 50000,
-//   qty: 0,
-//   bonus: 100,
-
-// } 
 const autoUpgrades = [
 
   {
@@ -108,24 +78,25 @@ function BuyAutoUpgrades(upgradeName) {
     selectedUpgrade.qty++
     selectedUpgrade.price += .5 * selectedUpgrade.price
     automaticPower += selectedUpgrade.bonus
-    setInterval(idleUpgrades, 3000)
+
+    // console.log(`Auto Power=`, automaticPower, `Price=`, selectedUpgrade.price, `total Cheese =`, totalCheese)
   }
 
+  let AutoPriceElm = document.getElementById(upgradeName)
+  AutoPriceElm.innerText = selectedUpgrade.price.toFixed().toString()
 
-  let PixPriceElm = document.getElementById(upgradeName)
-  PixPriceElm.innerText = selectedUpgrade.price.toFixed().toString()
+  let AutoPowerElm = document.getElementById(`automaticPower`)
+  AutoPowerElm.innerText = automaticPower.toFixed().toString()
 
   drawTotalCheese()
   drawStats()
 
 }
 
-function idleUpgrades() {
+setInterval(() => totalCheese += automaticPower, 3000)
 
-  totalCheese += automaticPower
+setInterval(drawTotalCheese, 1000)
 
-
-}
 
 function drawStats() {
 
