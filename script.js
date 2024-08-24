@@ -1,6 +1,6 @@
 console.log(`Get ready to eat some CHEESE`)
 
-let totalCheese = 100000
+let totalCheese = 1000000
 let clickPower = 1
 let automaticPower = 0
 let bonus = 0
@@ -89,7 +89,7 @@ function BuyAutoUpgrades(upgradeName) {
   AutoPowerElm.innerText = automaticPower.toFixed().toString()
 
   drawTotalCheese()
-  drawStats()
+  drawAutoStats()
 
 }
 
@@ -110,6 +110,27 @@ function drawStats() {
     totalStatElm.innerText = (stat.qty * stat.bonus).toFixed().toString()
 
   })
+
+
+
+
+
+}
+
+function drawAutoStats() {
+
+  autoUpgrades.forEach((stat) => {
+
+    let statElm = document.getElementById(`auto-${stat.name}`)
+    let totalStatElm = document.getElementById(`auto-${stat.name}-bonus`)
+
+
+    statElm.innerText = stat.qty.toFixed().toString()
+    totalStatElm.innerText = (stat.qty * stat.bonus).toFixed().toString()
+
+    console.log(stat.name)
+  })
+
 
 
 
