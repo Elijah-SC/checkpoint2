@@ -1,6 +1,6 @@
 console.log(`Get ready to eat some CHEESE`)
 
-let totalCheese = 1000000
+let totalCheese = 100000
 let clickPower = 1
 let automaticPower = 0
 let bonus = 0
@@ -58,7 +58,7 @@ function buyClickUpgrade(upgradeName) {
     clickPower += selectedUpgrade.bonus
     selectedUpgrade.qty++
     selectedUpgrade.price += .5 * selectedUpgrade.price
-  }
+  } else window.alert(`not enough cheese`)
 
 
   let PixPriceElm = document.getElementById(upgradeName)
@@ -80,7 +80,7 @@ function BuyAutoUpgrades(upgradeName) {
     automaticPower += selectedUpgrade.bonus
 
     // console.log(`Auto Power=`, automaticPower, `Price=`, selectedUpgrade.price, `total Cheese =`, totalCheese)
-  }
+  } else window.alert(`not enough cheese`)
 
   let AutoPriceElm = document.getElementById(upgradeName)
   AutoPriceElm.innerText = selectedUpgrade.price.toFixed().toString()

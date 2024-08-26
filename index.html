@@ -53,37 +53,85 @@
 
     </article>
 
-    <article class="row bg-warning justify-content-evenly">
+    <article class="row bg-warning justify-content-around">
 
-      <section class="col-5 rounded bg-warning-darker m-3 p-3">
+      <section class="col-lg-5 rounded bg-warning-darker m-3 p-3">
         <div class="row">
           <div class="col-6">
             <p>Click Upgrades</p>
-            <div id="pickaxe" onclick="buyClickUpgrade(`pickaxe`)"
-              class="fw-bold text-light text-start btn btn-info up-btn m-1">
-              50</div> <span> Buy Pickaxe +5</span>
-            <div id="drill" onclick="buyClickUpgrade(`drill`)"
-              class="fw-bold text-light text-start btn btn-info up-btn m-1">300
-            </div> <span>Buy Drill + 20</span>
+
+            <sub-section class="row">
+
+              <div class="col-2">
+                <button id="pickaxe" onclick="buyClickUpgrade(`pickaxe`)"
+                  class="fw-bold text-light text-start btn btn-info up-btn m-1">
+                  50
+                </button>
+
+              </div>
+
+              <div class="col-10 text-end">
+                <span> Buy Pickaxe +5</span>
+              </div>
+
+              <div class="col-2">
+
+                <div id="drill" onclick="buyClickUpgrade(`drill`)"
+                  class="fw-bold text-light text-start btn btn-info up-btn m-1">300
+                </div>
+
+              </div>
+
+              <div class="col-10 text-end">
+
+                <span>Buy Drill + 20</span>
+
+              </div>
+
+
+            </sub-section>
+
           </div>
+
+
           <div class="col-6">
+
             <p>Automatic Upgrades</p>
-            <div id="rover" onclick="BuyAutoUpgrades(`rover`)"
-              class="fw-bold text-light text-start btn btn-danger up-btn m-1">
-              1000</div>
-            <span> Buy rover +10/3s</span>
-            <div id="space-station" onclick="BuyAutoUpgrades(`space-station`)"
-              class="fw-bold text-light text-start btn btn-danger up-btn m-1">
-              50,000</div>
-            <span>Buy Space Station +100/3s</span>
+            <sub-section class="row">
+
+              <div class="col-2">
+                <div id="rover" onclick="BuyAutoUpgrades(`rover`)"
+                  class="fw-bold text-light text-start btn btn-danger up-btn m-1">
+                  1000</div>
+
+              </div>
+
+              <div class="col-10 text-end">
+                <span> Buy rover +10/3s</span>
+
+              </div>
+
+              <div class="col-2">
+                <div id="space-station" onclick="BuyAutoUpgrades(`space-station`)"
+                  class="fw-bold text-light text-start btn btn-danger up-btn m-1">
+                  50,000</div>
+
+              </div>
+
+              <div class="col-10 text-end">
+                <span>Buy Space Station +100/3s</span>
+            </sub-section>
           </div>
+
+        </div>
+
         </div>
       </section>
 
 
 
 
-      <section class="col-5 rounded bg-warning-darker m-3 p-3">
+      <section class="col-lg-5 rounded bg-warning-darker m-3 p-3">
 
         <div class="row">
           <div class="col-md-6">
@@ -108,7 +156,7 @@
             </div>
             <div class="text-start">
               <button id='auto-space-station' class="btn btn-outline-light m-1">0</button>
-              <span class="stats-width">Moon Station</span> <i class="mdi mdi-timer stats-icons"></i>
+              <span class="stats-width">Space Station</span> <i class="mdi mdi-timer stats-icons"></i>
               <button id='auto-space-station-bonus' class="btn btn-outline-light m-1 text-end">0</button>
             </div>
           </div>
